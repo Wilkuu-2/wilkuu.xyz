@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}TEMPLATE{% endblock  %}</title>
+        <link rel="stylesheet" href="/static/bundle.min.css">
+        {% block head %} {% endblock %} 
+    </head>
+    <body>
+        <main>
+            {% block content %} {% endblock %}  
+        </main>
+    </body>
+    <script type="text/javascript" src="/static/bundle.min.js"></script>
+</html>
+
+
