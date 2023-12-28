@@ -7,10 +7,9 @@ use tracing::{event,Level};
 mod pages;
 mod db;
 mod util;
-pub use util::HtmlTemplate;  
 
 #[tokio::main]
-async fn main() {
+pub async fn start() {
     dotenv().ok();
     tracing_subscriber::fmt::init();
     event!(Level::INFO, "Starting");

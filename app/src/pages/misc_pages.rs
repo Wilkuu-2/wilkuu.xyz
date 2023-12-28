@@ -1,10 +1,9 @@
-
-use crate::HtmlTemplate; 
-use askama::Template; 
 use axum::routing::Router;
 use axum::routing::get;
 use axum::response::IntoResponse;
-use axum::extract::Path;
+use axum::extract::Path; 
+use views::home::*;
+use askama_axum::into_response;
 
 pub fn misc_pages() -> Router {
     Router::new()
@@ -13,23 +12,15 @@ pub fn misc_pages() -> Router {
 }
 
 
-// Homepage
-#[derive(Template)]
-#[template(path="home.html")]
-struct HomePage {}
 
 async fn homepage() -> impl IntoResponse
 {
-    HtmlTemplate(HomePage {})
+    into_response(&HomePage {})
 }
-
-#[derive(Template)]
-#[template(ext="html",source="<h1>Hello, {{ name }}!</h1><h2>How are you?</h2>")]
-struct HelloTemplate {name: String} 
 
 async fn greet(Path(name): Path<String>) -> impl IntoResponse {
     let template = HelloTemplate {name};
-    HtmlTemplate(template)
+    into_response(&template)
 }
 
 

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export $(filter_env .env | xargs)
+
+echo printing in import
+echo $VAR
