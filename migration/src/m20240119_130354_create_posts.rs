@@ -1,6 +1,5 @@
 use sea_orm_migration::prelude::*;
 
-
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
@@ -20,11 +19,26 @@ impl MigrationTrait for Migration {
                             .auto_increment()
                             .primary_key(),
                     )
-                    .col(ColumnDef::new(Post::Version).small_integer().not_null().default(1))
+                    .col(
+                        ColumnDef::new(Post::Version)
+                            .small_integer()
+                            .not_null()
+                            .default(1),
+                    )
                     .col(ColumnDef::new(Post::Title).string().not_null())
                     .col(ColumnDef::new(Post::Text).string().not_null())
-                    .col(ColumnDef::new(Post::CreatedAt).timestamp().not_null().extra("DEFAULT CURRENT_TIMESTAMP".to_string()))
-                    .col(ColumnDef::new(Post::ModifiedAt).timestamp().not_null().extra("DEFAULT CURRENT_TIMESTAMP".to_string()))
+                    .col(
+                        ColumnDef::new(Post::CreatedAt)
+                            .timestamp()
+                            .not_null()
+                            .extra("DEFAULT CURRENT_TIMESTAMP".to_string()),
+                    )
+                    .col(
+                        ColumnDef::new(Post::ModifiedAt)
+                            .timestamp()
+                            .not_null()
+                            .extra("DEFAULT CURRENT_TIMESTAMP".to_string()),
+                    )
                     .to_owned(),
             )
             .await
@@ -41,10 +55,9 @@ impl MigrationTrait for Migration {
 enum Post {
     Table,
     Id,
-    Version, 
+    Version,
     Title,
     Text,
-    CreatedAt, 
-    ModifiedAt, 
+    CreatedAt,
+    ModifiedAt,
 }
-

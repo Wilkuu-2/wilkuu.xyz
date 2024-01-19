@@ -1,8 +1,8 @@
-use axum::routing::get;
+use crate::{view, Router};
+use axum::extract::Path;
 use axum::response::IntoResponse;
-use axum::extract::Path; 
+use axum::routing::get;
 use views::home::*;
-use crate::{view,Router}; 
 
 pub fn misc_pages() -> Router {
     Router::new()
@@ -10,14 +10,11 @@ pub fn misc_pages() -> Router {
         .route("/greet/:name", get(greet))
 }
 
-async fn homepage() -> impl IntoResponse
-{
+async fn homepage() -> impl IntoResponse {
     view(&HomePage {})
 }
 
 async fn greet(Path(name): Path<String>) -> impl IntoResponse {
-    let template = HelloTemplate {name};
+    let template = HelloTemplate { name };
     view(&template)
 }
-
-
