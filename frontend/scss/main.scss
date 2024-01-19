@@ -1,6 +1,28 @@
 
-$reddish: #ff1122;
+$bg: #121212;
+$bg_content: #ae3a76;
+$fg: #fafafa;
+
+html {
+    background-color: $bg; 
+    color: $fg;
+} 
+
 
 body {
-    background-color: $reddish; 
+   margin: 5%;  //TODO: Make this reactive to the used media  
+   background-color: $bg_content;
+} 
+
+nav {
+    display: grid;
+    position: float;
+    left: 0; 
+    top: 0;
+
+} 
+
+main {
+    margin: auto;
+    text-align: center; 
 } 

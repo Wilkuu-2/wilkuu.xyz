@@ -1,0 +1,35 @@
+
+
+{% extends "main.html" %}
+{% block title %} Editing a post {% endblock %}
+
+{% block content %}
+    {% let ttitle -%}
+    {% let ttext -%}
+    {% let id -%}
+    {% if let Some(post) = post_opt %}
+        {% let ttitle = post.title.as_str() %}
+        {% let ttext = post.text.as_str() %}
+        {% let id = post.id %}
+    {% else %}
+        {% let ttitle ="A new post" %}
+        {% let ttext ="Lorem ipsum" %}
+        {% let id = 0 %}
+    {% endif %}
+    <form method="POST", action="/portfolio/edit"> 
+        <div>
+            <label for="title">Post Title</label>
+            <input name="name", id="title", value={{ ttitle }}></input>
+        </div> 
+        <div>
+            <label for="text"></label>
+            <textarea name="text", id="text" rows="10" cols="50">
+                {{ ttext }}
+            </textarea>
+            <input type="hidden" name="id" value="{{ id }}"></input>
+        </div>
+        <div>
+            <input type="submit" value="Done"></input>
+        </div>
+    </form> 
+{% endblock %} 

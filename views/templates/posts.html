@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block title %} Posts{% endblock %}
+
+{% block content %}
+
+<h1>Posts</h1>
+<section class=posts>
+{% for post in posts %}
+    <article id="Post_{{ loop.index }}">
+        <div class="post_title">{{post.title}}</div>
+        <div class="post_content">{{post.text|markdown}}</div>
+    </article>
+{% endfor %}
+</section>
+
+{% endblock %} 

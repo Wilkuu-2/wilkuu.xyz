@@ -7,9 +7,11 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    pub version: i32,
+    pub version: i16,
     pub title: String,
     pub text: String,
+    pub created_at: DateTime,
+    pub modified_at: DateTime,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

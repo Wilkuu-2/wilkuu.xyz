@@ -19,5 +19,6 @@ export default {
                 fileName: "bundle.min.css",
                 output: "../static/bundle.min.css",
                 outputStyle: "compressed",
+                watch: './scss/'
              })]
 };

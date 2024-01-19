@@ -8,3 +8,4 @@ members = [".", "app", "entity", "migration", "views"]
 
 [dependencies]
 wilkuu_xyz_app = { path = "app" }
+

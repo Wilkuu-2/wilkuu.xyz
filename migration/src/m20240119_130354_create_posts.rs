@@ -1,5 +1,6 @@
 use sea_orm_migration::prelude::*;
 
+
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
@@ -12,22 +13,24 @@ impl MigrationTrait for Migration {
                 Table::create()
                     .table(Post::Table)
                     .if_not_exists()
-                    .col(ColumnDef::new(Post::Id)
-                         .integer()
-                         .not_null()
-                         .auto_increment()
-                         .primary_key())
-                    .col(ColumnDef::new(Post::Version).integer().not_null())
+                    .col(
+                        ColumnDef::new(Post::Id)
+                            .integer()
+                            .not_null()
+                            .auto_increment()
+                            .primary_key(),
+                    )
+                    .col(ColumnDef::new(Post::Version).small_integer().not_null().default(1))
                     .col(ColumnDef::new(Post::Title).string().not_null())
                     .col(ColumnDef::new(Post::Text).string().not_null())
-                    .to_owned()
-                    )
-                .await
-
+                    .col(ColumnDef::new(Post::CreatedAt).timestamp().not_null().extra("DEFAULT CURRENT_TIMESTAMP".to_string()))
+                    .col(ColumnDef::new(Post::ModifiedAt).timestamp().not_null().extra("DEFAULT CURRENT_TIMESTAMP".to_string()))
+                    .to_owned(),
+            )
+            .await
     }
 
     async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
-        // Replace the sample below with your own migration scripts
         manager
             .drop_table(Table::drop().table(Post::Table).to_owned())
             .await
@@ -41,4 +44,7 @@ enum Post {
     Version, 
     Title,
     Text,
+    CreatedAt, 
+    ModifiedAt, 
 }
+
