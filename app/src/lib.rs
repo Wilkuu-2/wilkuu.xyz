@@ -24,7 +24,7 @@ pub async fn start() {
     let state = AppState::new(AppStateT { conn });
 
     let app = Router::new()
-        .nest("/portfolio", controllers::posts())
+        .nest("posts","/portfolio", controllers::posts())
         .merge(controllers::misc_pages())
         .with_state(state);
 
@@ -40,7 +40,7 @@ pub async fn start() {
         .unwrap();
 }
 
-pub type Router = axum::routing::Router<AppState, axum::body::Body>;
+pub type Router = axum_named_routes::NamedRouter<AppState, axum::body::Body>;
 pub type AppState = std::sync::Arc<AppStateT>;
 pub struct AppStateT {
     conn: sea_orm::DatabaseConnection,

@@ -6,8 +6,8 @@ use views::home::*;
 
 pub fn misc_pages() -> Router {
     Router::new()
-        .route("/", get(homepage))
-        .route("/greet/:name", get(greet))
+        .route("index", "/", get(homepage))
+        .route("greet","/greet/:name", get(greet))
 }
 
 async fn homepage() -> impl IntoResponse {

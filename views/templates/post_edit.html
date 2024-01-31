@@ -16,16 +16,15 @@
         {% let ttext ="Lorem ipsum" %}
         {% let id = 0 %}
     {% endif %}
-    <form method="POST", action="/portfolio/edit"> 
+
+    <form method="POST" action={{ routes|route("posts.update") }}> 
         <div>
             <label for="title">Post Title</label>
-            <input name="name", id="title", value={{ ttitle }}></input>
+            <input name="name" id="title" value="{{ ttitle }}"></input>
         </div> 
         <div>
             <label for="text"></label>
-            <textarea name="text", id="text" rows="10" cols="50">
-                {{ ttext }}
-            </textarea>
+            <textarea name="text" id="text" rows="10" cols="50">{{ ttext }}</textarea>
             <input type="hidden" name="id" value="{{ id }}"></input>
         </div>
         <div>

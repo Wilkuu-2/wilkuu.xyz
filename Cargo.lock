@@ -460,6 +460,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "axum-named-routes"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cb331b3139c78711a8b04dd22cd586337970a2f96fbce24c3e548ff08c33a1a1"
+dependencies = [
+ "axum",
+ "futures",
+ "tower-layer",
+ "tower-service",
+]
+
+[[package]]
 name = "backtrace"
 version = "0.3.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -651,8 +663,10 @@ checksum = "7f2c685bad3eb3d45a01354cedb7d5faa66194d1d58ba6e267a8de788f79db38"
 dependencies = [
  "android-tzdata",
  "iana-time-zone",
+ "js-sys",
  "num-traits",
  "serde",
+ "wasm-bindgen",
  "windows-targets 0.48.5",
 ]
 
@@ -3459,6 +3473,7 @@ name = "views"
 version = "0.1.0"
 dependencies = [
  "askama",
+ "axum-named-routes",
  "entity",
  "serde",
 ]
@@ -3586,6 +3601,8 @@ dependencies = [
  "askama",
  "axum",
  "axum-core",
+ "axum-named-routes",
+ "chrono",
  "dotenv",
  "entity",
  "sea-orm",
