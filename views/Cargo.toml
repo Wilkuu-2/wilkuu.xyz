@@ -10,6 +10,6 @@ askama = { git = "https://github.com/Wilkuu-2/askama.git", features = ["comrak",
 # askama_axum = { version = "0.4.0", features = ["config", "markdown", "serde-json", "urlencode"] }
 serde = { version = "1.0.193", features = ["derive"] }
 entity = {path = "../entity"} 
-axum-named-routes = "0.2.3"
+axum-named-routes = { path = "../../axum-named-routes"}
   
 

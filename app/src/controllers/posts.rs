@@ -1,8 +1,7 @@
 use axum::{
-    extract::{Form, Path, State},
-    response::IntoResponse,
-    routing::{get, post},
+    extract::{Form, Path, State}, http::StatusCode, response::IntoResponse, routing::{get, post}
 };
+use tracing::error;
 
 use crate::{view, AppState, Router};
 use entity::post::ActiveModel as PostA;
@@ -28,11 +27,14 @@ pub async fn list(
     State(state): State<AppState>,
     routes: Routes,
 ) -> Result<impl IntoResponse, axum::http::StatusCode> {
-    let posts = Post::find().order_by_desc(PostC::Id).all(&state.conn).await;
+    let p = Post::find().order_by_desc(PostC::Id).all(&state.conn).await;
 
-    match posts {
-        Ok(p) => view(&posts::PostList { posts: p , routes}),
-        Err(_) => Err(axum::http::StatusCode::NO_CONTENT),
+    match p {
+        Ok(posts) => view(&posts::PostList { posts , routes}),
+        Err(e) => {
+            error!("posts::lists: Error {:?}", e); 
+            Err(StatusCode::INTERNAL_SERVER_ERROR)
+        }
     }
 }
 

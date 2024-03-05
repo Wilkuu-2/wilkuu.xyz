@@ -2,27 +2,96 @@
 $bg: #121212;
 $bg_content: #ae3a76;
 $fg: #fafafa;
+$nav_width: 100px;
 
 html {
     background-color: $bg; 
     color: $fg;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 } 
-
 
 body {
-   margin: 5%;  //TODO: Make this reactive to the used media  
-   background-color: $bg_content;
+    margin: 0%;   
+    padding: 0;
+    min-height: 100vh;
+}
+
+
+.main_container {
+    margin: 0%;   
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: $nav_width;
+    grid-template-areas: 
+        "nav main";
 } 
 
-nav {
-    display: grid;
-    position: float;
-    left: 0; 
-    top: 0;
+.maincontainer ::before {
+    grid-area: nav; 
+    content: "";
+}   
 
+nav {
+   background-color: $bg_content;
+   position: fixed;
+   width: $nav_width; 
+   left: 0px; 
+   top: 10vh;
+   height: 80vh;
+   padding: 2pt 0pt 2pt 4pt;
+    
+   
+   display: flex; 
+   flex-direction: column;
+} 
+
+nav > a {
+    flex-grow: 0;
+}
+
+
+nav > div {
+   flex-grow: 2; 
 } 
 
 main {
-    margin: auto;
-    text-align: center; 
+   grid-area: main; 
+   background-color: $bg_content;
+   margin: 10% 5% 5% 5%;
+   padding: 0pt;
+   text-align: center; 
+
+    display: grid; 
+    grid-template-rows: 50pt;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "title"
+        "content";
 } 
+
+main > div {
+    grid-area: content;
+} 
+
+.title {
+    color: $fg;
+    position: relative; 
+    top: -40pt;
+    left: 1%;
+    width: 90%;
+    display: flex;
+    grid-area: title;
+    flex-wrap: wrap;
+} 
+.title > h1 { 
+    flex-grow: 0;
+} 
+
+.title > div {
+    flex-grow: 2;
+}   
+
+

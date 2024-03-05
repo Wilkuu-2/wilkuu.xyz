@@ -21,6 +21,7 @@ services:
     environment: 
       - POSTGRES_USER=postgres 
       - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=wilkuu_xyz_dev
     network_mode: "host"
     # ports: 
     #   - '5432:5432'

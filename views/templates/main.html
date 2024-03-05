@@ -7,18 +7,22 @@
     </head>
     <body>
         <nav>
-            <span>
-                Nav bar
-            </span>
-            <ul>
-                <li><a href="/"> Link 1</a></li>
-                <li><a href="/"> Link 1</a></li>
-                <li><a href="/"> Link 1</a></li>
-            </ul>  
+             <a href="/">Home</a></li>
+             <a href="/portfolio">Portfolio</a></li>  
+             <div></div>
+             <a href="/contact">Contact</a></li>
         </nav>
-        <main>
-            {% block content %} {% endblock %}  
-        </main>
+        <div class="main_container"> 
+            <main>
+                <div class="title">
+                    <h1>L</h1>
+                    <h1>Wilkuu.xyz</h1>
+                    <div></div>
+                    <h1>{% block title %}{% endblock %}<h1>
+                </div>
+                <div> {% block content %} {% endblock %} </div>  
+            </main>
+        </div>
     </body>
     <script type="text/javascript" src="/static/bundle.min.js"></script>
 </html>

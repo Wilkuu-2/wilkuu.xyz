@@ -14,8 +14,7 @@ views = { path = "../views" }
 # migration = { path = "../migration" } # depends on your needs
 
 askama = { git = "https://github.com/Wilkuu-2/askama.git", features = ["comrak", "serde-json", "markdown"] }
-axum = { version = "0.6.20", features = ["tracing", "macros", "http2", "headers"] }
-axum-core = "0.3.4"
+# axum-core = "0.4"
 dotenv = "0.15.0"
 tokio = { version = "1.34.0", features = ["full"] }
 tracing = "0.1"
@@ -23,5 +22,9 @@ tracing-subscriber = {version="0.3", features = ["env-filter"]}
 sea-orm = { version = "0.12.10", features = ["mock", "runtime-tokio-native-tls", "sqlx-postgres"] }
 serde = { version = "1.0.195", features = ["derive"] }
 chrono = "0.4.31"
-axum-named-routes = "0.2.3"
+axum-named-routes = { path = "../../axum-named-routes"}
+tower-cookies = "0.10.0"
+axum = { version = "0.7.4", features = ["macros", "http2"] }
+tower-sessions = "0.10.1"
+axum-login = "0.13.1"
 

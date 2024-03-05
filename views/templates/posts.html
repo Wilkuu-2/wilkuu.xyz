@@ -3,15 +3,27 @@
 {% block title %} Posts{% endblock %}
 
 {% block content %}
-
-<h1>Posts</h1>
 <section class=posts>
+{% if posts.len() > 0  %}
 {% for post in posts %}
     <article id="Post_{{ loop.index }}">
-        <div class="post_title">{{post.title}} <a href="{{ routes|route("posts.edit")}}/{{ post.id }}">Edit</a> </div>
+        <div class="post_title">{{post.title}} 
+            <a href="{{ routes|route("posts.edit")}}/{{ post.id }}">
+                Edit
+            </a> 
+        </div>
         <div class="post_content">{{post.text|markdown}}</div>
     </article>
 {% endfor %}
+{% else %}
+    <article>
+        <div class="post_title">There are no posts</div>
+        <div class="post_content">
+            <p>How about you make one?</p>
+            <a href="{{routes|route("posts.add")}}"> Make a new post </a>
+        </div>  
+    </article> 
+{% endif %}
 </section>
 
 {% endblock %} 
