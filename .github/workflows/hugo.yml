@@ -65,6 +65,7 @@ jobs:
           local_path: ./public/*
           # destination path
           remote_path: ./
+          sftp_only: true
 
         
 
