@@ -60,7 +60,7 @@ jobs:
           # remote port
           port: ${{secrets.DEPLOY_PORT}} # optional, default is 22
           # ssh private key (~/.ssh/id_rsa)
-          key: ${{secrets.DEPLOY_KEY}}
+          ssh_private_key: ${{secrets.DEPLOY_KEY}}
           # source files path
           local_path: ./public/*
           # destination path
