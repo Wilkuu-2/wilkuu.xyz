@@ -51,7 +51,7 @@ jobs:
       - name: SFTP Push
         # You may pin to the exact commit or the version.
         # uses: datanomi/SFTP-Push@856acb306cfa4d21ef922e5d5d1ffd03f401e92a
-        uses: dwlixcc/SFTP-Deploy-Action@v1.2.4
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           username: ${{secrets.DEPLOY_USER}}
           # remote host
