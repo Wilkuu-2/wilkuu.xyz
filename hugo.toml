@@ -8,7 +8,7 @@ paginate = 20
 summaryLenghh = 80
 
 [params]
-    author = "Wilkuu"
+    author = "Wilkuu - [source](https://github.com/Wilkuu-2/wilkuu.xyz)"
     description = "A blog about some mediocre stuff"  # this will be added as metadata
 
     posts = "posts"  # content directory where to find home page posts; default searches in "posts" and "post"
@@ -124,7 +124,7 @@ summaryLenghh = 80
     [[menu.icons]]
         identifier = "github"
         name = "GitHub"
-        url = "https://github.com/Wilkuu-1"
+        url = "https://github.com/Wilkuu-2"
         weight = 10
 
 # this section is necessary if you want infinite scrolling
