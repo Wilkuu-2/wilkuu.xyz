@@ -16,4 +16,4 @@ Here is the original version, which has all the content I written at the time.
 
 In order to send it to the Education Committee, I want to finish the summary, you will be able to see it here when I finish it.  
 
-2024 Version: WIP
+2024 Version: [here](/docs/inttech_2024.pdf) 
