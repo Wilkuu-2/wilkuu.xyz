@@ -9,7 +9,7 @@ draft = false
 In 2023 I created a summary for one of the most infamous courses in Creative Technology. This summary was quite incomplete but it did it's job and I got a lot of good reviews for it. 
 Because of the good feedback I sent it to the people who were doing this subject in 2024, but apparently I sent a older version?
 
-The ODT file seems to miss some of the summary, which is wierd, but not that unexpected, seeing how good I am at archiving data. 
+The ODT file seems to miss some of the summary, which is weird, but not that unexpected, seeing how good I am at archiving data. 
 Here is the original version, which has all the content I written at the time. 
 
 2023 Version: [here](/docs/inttech_2023.pdf) 
