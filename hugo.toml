@@ -2,10 +2,16 @@ baseURL = 'https://wilkuu.xyz'
 languageCode = 'en-us'
 title = "Wilkuu's little site"
 theme = "hugo-ficurinia"
+enableRobotsTXT = true
 
 copyright = "Wilkuu"
 paginate = 20
 summaryLenghh = 80
+
+[sitemap]
+  changefreq = 'weekly'
+  disable = false
+  priority = 1
 
 [params]
     author = "Wilkuu - [source](https://github.com/Wilkuu-2/wilkuu.xyz)"

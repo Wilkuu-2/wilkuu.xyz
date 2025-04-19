@@ -1,0 +1,15 @@
+# Block everyone by default
+User-agent: *
+Disallow: /
+
+{{ $disallow := "/ai_training_data" }} 
+{{ $agents := slice "Googlebot" "Bingbot" "Slurp" "DuckDuckBot" "Baiduspider" "YandexBot" "Twitterbot" "facebookexternalhit" "Facebot" "LinkedInBot" "Discordbot" "Pinterestbot" "WhatsApp" "TelegramBot" }}
+
+# Allow major search engines and social media bots
+
+{{ range $agents}}
+User-agent: {{ . }}
+Disallow: {{ $disallow }}
+{{ end }}
+
+Sitemap: {{ site.Home.Sitemap.Filename | default "sitemap.xml" | absURL }}
