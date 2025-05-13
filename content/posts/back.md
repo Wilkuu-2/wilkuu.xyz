@@ -1,7 +1,7 @@
 +++
 title = 'Back with vengence'
 date = 2025-05-13T22:45:30+02:00
-draft = true
+draft = false
 +++
 
 > This is the first post I'm writing in a while. 
