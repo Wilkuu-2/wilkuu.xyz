@@ -1,6 +1,7 @@
 # Block everyone by default
 User-agent: *
 Disallow: /
+Allow: sitemap.xml
 
 {{ $disallow := "/ai_training_data" }} 
 {{ $agents := slice "Googlebot" "Bingbot" "Slurp" "DuckDuckBot" "Baiduspider" "YandexBot" "Twitterbot" "facebookexternalhit" "Facebot" "LinkedInBot" "Discordbot" "Pinterestbot" "WhatsApp" "TelegramBot" }}
