@@ -1,9 +1,14 @@
-+++
-title = 'Punishing Naughty AI with Quicksand: A small tarpit experiment'
-date = 2025-05-13T22:21:39+02:00
-draft = false
-+++
-
+---
+title:  'Punishing Naughty AI with Quicksand: A small tarpit experiment'
+date: 2025-05-13T22:21:39+02:00
+draft: false
+tags:
+    - AI
+    - in-progress
+    - tarpit 
+    - markov-babble
+    - text-processing
+---
 This page is dedicated to the AI tarpit running on this website. 
 This is currently running [Nepenthes](https://forge.hackers.town/hackers.town/nepenthes), which uses Markov babble to choke the AI in addition to creating a slow experience. 
 

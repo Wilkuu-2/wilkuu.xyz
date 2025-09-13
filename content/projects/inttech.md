@@ -1,8 +1,14 @@
-+++
-title = 'Internet Technology Summary'
-date = 2024-06-30T22:03:12+02:00
-draft = false
-+++
+---
+title: 'Internet Technology Summary'
+date: 2024-06-30T22:03:12+02:00
+draft: false
+tags: 
+    - creative-technology 
+    - summary
+    - internet
+    - ip-protocol
+    - notes 
+---
 
 ### About
 

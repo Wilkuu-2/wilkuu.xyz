@@ -1,8 +1,13 @@
-+++
-title = 'First article using Hugo.'
-date = 2024-06-30T21:44:10+02:00
-draft = false
-+++
+---
+title: 'First article using Hugo.'
+date: 2024-06-30T21:44:10+02:00
+draft: false 
+tags: 
+    - rust
+    - web
+    - html 
+    - hugo
+--- 
 
 I really overcomplicated life for myself. I used a lot of backend frameworks, from Warp to Axum and things inbetween (I was a little bit too into Rust).
 But all I needed is a simple site where I can type stuff down. And this is it, a Hugo site where I can put in my thoughts and they should be automatically put into the interwebs using GitHub actions. 

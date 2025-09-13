@@ -1,8 +1,20 @@
-+++
-title = 'My path to create my own piece of the Web.'
-date = 2024-07-27T20:44:24+02:00 
-draft = false
-+++
+---
+title: 'My path to create my own piece of the Web.'
+date: 2024-07-27T20:44:24+02:00 
+draft: false
+tags: 
+    - html
+    - css 
+    - javascript
+    - ui 
+    - ux 
+    - rust 
+    - axum 
+    - bootstrap
+    - markdown 
+    - self-hosting     
+    - backstory
+---
 
 There are many ways to create a website and the content for it. I experimented with some different ways to create a website, so I can say that the possibilities are near endless. 
 
