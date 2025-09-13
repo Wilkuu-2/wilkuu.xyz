@@ -48,24 +48,26 @@ jobs:
           hugo \
             --minify \
       
-      - name: SFTP Push
+      - name: rsync deployments
         # You may pin to the exact commit or the version.
-        # uses: datanomi/SFTP-Push@856acb306cfa4d21ef922e5d5d1ffd03f401e92a
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        # uses: contention/rsync-deployments@10f98a8726e6760601d8818ea6ff812f87bf8a97
+        uses: contention/rsync-deployments@v2.0.0
         with:
-          username: ${{secrets.DEPLOY_USER}}
-          # remote host
-          server: ${{secrets.DEPLOY_HOST}}
-
-          # remote port
-          port: ${{secrets.DEPLOY_PORT}} # optional, default is 22
-          # ssh private key (~/.ssh/id_rsa)
-          ssh_private_key: ${{secrets.DEPLOY_KEY}}
-          # source files path
-          local_path: ./public/*
-          # destination path
-          remote_path: ./
-          sftp_only: true
+          # Initial/required rsync flags
+          # flags: 
+          # Exclude flags and directory pairs
+          # excludes: 
+          # The server user
+          user: ${{secrets.DEPLOY_USER}}
+          # The deployment target
+          host: ${{secrets.DEPLOY_HOST}}
+          # The local path to sync
+          localpath: ./public/*
+          # The remote path to sync
+          remotepath: ./
+          # The private key
+          deploy_key: ${{secrets.DEPLOY_KEY}}
+                
 
         
 
