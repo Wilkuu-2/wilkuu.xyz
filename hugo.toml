@@ -5,8 +5,8 @@ theme = "hugo-ficurinia"
 enableRobotsTXT = true
 
 copyright = "Wilkuu"
-paginate = 20
-summaryLenghh = 80
+pagination.pagerSize = 8
+summaryLenghh = 1
 
 [sitemap]
   changefreq = 'weekly'
@@ -14,7 +14,7 @@ summaryLenghh = 80
   priority = 1
 
 [params]
-    author = "Wilkuu - [source](https://github.com/Wilkuu-2/wilkuu.xyz)"
+    author = "Wilkuu - [source](https://github.com/Wilkuu-2/wilkuu.xyz) "
     description = "A blog about some mediocre stuff"  # this will be added as metadata
 
     posts = "posts"  # content directory where to find home page posts; default searches in "posts" and "post"
@@ -95,7 +95,7 @@ summaryLenghh = 80
     tocBeforeImage = false  # show the table of contents before the main article image; default false
 
     # alternative sidebar layout
-    enableSidebarLayout = false
+    enableSidebarLayout = true
     tocInSidebar = false  # if the sidebar is enbabled, show the TOC in the sidebar
 
     # redirect to baseURL if current URL host doesn't match
@@ -132,6 +132,11 @@ summaryLenghh = 80
         name = "GitHub"
         url = "https://github.com/Wilkuu-2"
         weight = 10
+    [[menu.icons]]
+        identifier = "trashcan"
+        name = "🗑️"
+        url = "https://wilkuu.xyz/ai_training_data"
+        weight = 0
 
 # this section is necessary if you want infinite scrolling
 # it allows to output the article list as paged JSON so that "pages" can be retrieved via javascript
