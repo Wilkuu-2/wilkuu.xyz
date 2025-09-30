@@ -25,7 +25,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.124.1
+      HUGO_VERSION: 0.128.2
     steps:
       - name: Install Hugo CLI
         run: |
@@ -54,7 +54,7 @@ jobs:
         uses: contention/rsync-deployments@v2.0.0
         with:
           # Initial/required rsync flags
-          # flags: 
+          flags: -r -u
           # Exclude flags and directory pairs
           # excludes: 
           # The server user
