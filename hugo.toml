@@ -175,7 +175,7 @@ summaryLenghh = 1
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "Wilkuu's site"
 
     [languages.en.params]
       subtitle = "Wilkuu's home site"
