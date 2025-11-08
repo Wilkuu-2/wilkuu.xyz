@@ -18,11 +18,11 @@ And aside of computers, I also manage some students managing computers, by being
 I also like drawing on the side... 
 
 # What do I do? 
-Currenly, I am studying at the University of Twente, and being active as a board member there. 
+Currently, I am studying at the University of Twente, and being active as a board member there. 
 I finished my bachelor in Creative Technology by making a cool *Laravel* project involving maps and people making criteria sets. 
 
 So, programming, hacking or supporting hackers and programmers is something that I do actively and would also like to do after I am done with university. 
-Currently I am unemployed but I'd like to change that next year. 
+Right now, I am unemployed, but I'd like to change that next year. 
 
 I am also actively trying to learn about maintaining my own set of services for personal use and as a way to learn, so things like using Linux, Docker and other common sysadmin tools come semi-naturally by now. I also daily drive NixOS, although that's still a bit weird to use still. 
 

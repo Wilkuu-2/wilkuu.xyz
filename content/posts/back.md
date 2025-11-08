@@ -1,5 +1,5 @@
 +++
-title = 'Back with vengence'
+title = 'Back with vengeance.'
 date = 2025-05-13T22:45:30+02:00
 draft = false
 +++
@@ -11,4 +11,4 @@ Today I had some time left from not doing much productive stuff and decided that
 Yesterday I got the {{<nofollow "/ai_training_data" "tarpit">}} working. The project page for which you can find [here](/projects/tarpit). 
 
 I hope this is not my last posts. 
-And I see yall around.
+And I see you all around.
