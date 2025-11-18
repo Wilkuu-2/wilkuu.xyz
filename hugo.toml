@@ -205,6 +205,10 @@ summaryLenghh = 1
           identifier = "projects"
           name = "Projects"
           url = "/projects"
+        [[languages.en.menu.main]]
+          identifier = "tarpit"
+          name = "AI Scraper Zone"
+          url = "/ai_training_data"
 
 # [menu]
 #     # these links will be added to the main navigation menu, sorted by weight

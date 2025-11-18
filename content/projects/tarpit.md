@@ -12,8 +12,6 @@ tags:
 This page is dedicated to the AI tar pit running on this website. 
 This is currently running [Nepenthes](https://forge.hackers.town/hackers.town/nepenthes), which uses Markov babble to choke the AI in addition to creating a slow experience. 
 
-> This project is currently offline
-
 You can try it {{<nofollow "/ai_training_data" "here">}}
 
 ## Rationale 
