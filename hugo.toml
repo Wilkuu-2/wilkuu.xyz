@@ -6,7 +6,7 @@ enableRobotsTXT = true
 
 copyright = "Wilkuu"
 pagination.pagerSize = 8
-summaryLenghh = 1
+summaryLength = 1
 
 [markup.highlight]
   noClasses = false 
@@ -207,7 +207,7 @@ summaryLenghh = 1
           url = "/projects"
         [[languages.en.menu.main]]
           identifier = "tarpit"
-          name = "AI Scraper Zone"
+          name = "Special Data For AI"
           url = "/ai_training_data"
 
 # [menu]
